@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+    <main>
+        <img src="lanzarotte.jpg" alt="galeria" id="nie">
+    </main>
+    <div id="tak">
+        <section id="le">
+            <h3>Przeglądaj zdjęcia</h3>
+            <img src="lanzarotte.jpg" alt="lanzarotte" onclick="f0(document.getElementById('a').alt)" id="a">
+            <img src="pekin.jpg" alt="pekin" onclick="f1(document.getElementById('b').alt)" id="b">
+            <img src="serengeti.jpg" alt="serengeti" onclick="f1(document.getElementById('c').alt)" id="c">
+            <img src="wenecja.jpg" alt="wenecja" onclick="f1(document.getElementById('d').alt)" id="d">
+            <img src="tajlandia.jpg" alt="tajlandia" onclick="f1(document.getElementById('e').src = 'tajlandia.jpg')" id="e">
+        </section>
+        <section id="pr">
+            <h3>Obrazy w naszej galerii</h3>
+            <table>
+                <tr>
+                    <td>Europa</td>
+                    <td>Azja</td>
+                    <td>Agryka</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+            </table>
+                <p>Polub nas <img src="icon-off.png" id="be" onclick="f2()"></p>
+                <a href="https://pixabay.com" target="_blank">Okdryj więcej zdjęć</a>
+            
+        </section>
+    </div>
+    <footer>
+        Autor: PESEL
+    </footer>
+</body>
+<script>
+    function f0()
+    {
+        document.getElementById("nie").src = "lanzarotte.jpg";
+    }
+        function f1(e)
+        {
+        if(e == 'pekin')
+        {
+            document.getElementById('nie').src = 'pekin.jpg';
+        }
+        if(e == 'serengeti')
+        {
+            document.getElementById('nie').src = 'serengeti.jpg';
+        }
+        if(e == 'wenecja')
+        {
+            document.getElementById('nie').src = 'wenecja.jpg';
+        }
+        if(e == 'tajlandia.jpg')
+        {
+            document.getElementById('nie').src = 'tajlandia.jpg';
+        }
+        
+    }
+     
+    var i=0;
+function f2()
+    {
+        i++;
+        if(i%2==0)
+        {
+            document.getElementById('be').src = "icon-on.png";
+        }
+        else
+        {
+            document.getElementByid('be').src = "icon-off.png";
+        }
+    }
+</script>
+</html>
